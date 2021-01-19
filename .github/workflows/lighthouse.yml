@@ -10,5 +10,5 @@ jobs:
         uses: treosh/lighthouse-ci-action@v3
         with:
           urls: https://www.shuwasystem.co.jp/smp/
-          configPath: ./github/workflows/lighthouserc.json
+          configPath: ./.github/workflows/lighthouserc.json
           uploadArtifacts: true
