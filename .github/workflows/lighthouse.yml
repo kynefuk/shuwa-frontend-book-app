@@ -1,0 +1,14 @@
+name: Measure Web Performance
+on: [push]
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Do lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: https://www.shuwasystem.co.jp/smp/
+          configPath: ./github/workflows/lighthouserc.json
+          uploadArtifacts: true
